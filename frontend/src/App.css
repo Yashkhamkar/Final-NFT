@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap");
+:root {
+  --background: #000000;
+  --white: #ffffff;
+  --text-gradient-bg: rgb(105, 234, 203);
+  --text-gradient-1: linear-gradient(
+    90deg,
+    rgba(105, 234, 203, 1) 0%,
+    rgba(234, 204, 248, 1) 50%,
+    rgba(102, 84, 241, 1) 100%
+  );
+}
+.absolute-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cur-po {
+  cursor: pointer;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.heading-gradient {
+  background: var(--text-gradient-bg);
+  background: var(--text-gradient-1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.app__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.app__navigation .app__navigation-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #cbcbcb;
+  margin: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.app__navigation .app__navigation-dot:hover {
+  background-color: #313bac;
+}
+@media screen and (min-width: 2000px) {
+  .app__navigation .app__navigation-dot {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .app__navigation,
+  .app__social {
+    display: none;
+  }
+  .copyright {
+    padding: 2rem;
+  }
+}
